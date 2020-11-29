@@ -1,0 +1,10 @@
+# docker needs to be installed
+docker pull postgres
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+docker exec -it some-postgres /bin/bash
+# now, in the container:
+su - postgres
+createdb book
+psql book
+# continue with postgres commands in next file
+
