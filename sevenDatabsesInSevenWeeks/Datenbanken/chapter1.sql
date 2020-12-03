@@ -11,4 +11,4 @@ insert into cities values ('Munich', '80686', 'de');
 create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) Refererces cities(country_code,postal_code) match full);
 insert into venues(name,postal_code,country_code) values ('Crystal Ballroom','97205','us');
 insert into venues(name,postal_code,country_code) values ('Voodoo Donuts','97205','us');
-create table events(title text, starts timestamp, ends timestamp, venue_id number references venues, event_id serial primary key);
+create table events(title text, starts timestamp, ends timestamp, venue_id integer references venues, event_id serial primary key);
