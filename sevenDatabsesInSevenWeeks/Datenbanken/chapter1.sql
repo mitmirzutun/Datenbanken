@@ -1,0 +1,14 @@
+create table countries(country_code char(2) primary key, county_name text unique);
+insert into countries(country_code, country_name) values ('us', 'United States');
+insert into countries(country_code, country_name) values ('mx', 'Mexico');
+insert into countries(country_code, country_name) values ('au', 'Australia');
+insert into countries(country_code, country_name) values ('gb', 'United Kingdom);
+insert into countries(country_code, country_name) values ('de', 'Germany');
+create table cities(name text not null, postal_code varchar(9) check (postal_code <> ''), country_code char(2) references countries, primary key (country_code, postal_code));
+insert into cities values ('Portland', '97205', 'us');
+insert into cities values ('Munich', '80689', 'de');
+insert into cities values ('Munich', '80686', 'de');
+create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) Refererces cities(country_code,postal_code) match full);
+insert into venues(name,postal_code,country_code) values ('Crystal Ballroom','97205','us');
+insert into venues(name,postal_code,country_code) values ('Voodoo Donuts','97205','us');
+create table events(title text, starts timestamp, ends timestamp, venue_id number references venues, event_id serial primary key);
