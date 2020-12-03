@@ -12,3 +12,6 @@ create table venues(venue_id serial primary key, name varchar(255), street_addre
 insert into venues(name,postal_code,country_code) values ('Crystal Ballroom','97205','us');
 insert into venues(name,postal_code,country_code) values ('Voodoo Donuts','97205','us');
 create table events(title text, starts timestamp, ends timestamp, venue_id integer references venues, event_id serial primary key);
+insert into events (title, starts, ends, venue_id) values ('LARP Club', '2012-02-15 17:30:00', '2012-02-15 19:30:00', 2);
+insert into events (title, starts, ends) values ('April Fools Day', '2012-04-01 00:00:00', '2012-04-01 23:59:00');
+insert into events (title, starts, ends) values ('Christmas', '2012-12-25 00:00:00', '2012-12-25 23:59:00');
