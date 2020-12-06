@@ -17,3 +17,4 @@ insert into events (title, starts, ends) values ('April Fools Day', '2012-04-01 
 insert into events (title, starts, ends) values ('Christmas', '2012-12-25 00:00:00', '2012-12-25 23:59:00');
 select relname from pg_class where relnamespace='2200' and relkind='r';
 select c.country_name from countries c right join (select v.country_code from venues v left join events e on v.venue_id=e.venue_id where e.title='LARP Club') as v on v.country_code=c.country_code;
+alter table venues add active boolean default 't';
