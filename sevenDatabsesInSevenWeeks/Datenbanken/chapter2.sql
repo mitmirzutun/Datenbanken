@@ -30,3 +30,5 @@ select venues.name, count(*) from events left join venues on venues.venue_id=eve
 select venue_id from events group by venue_id having count(*) >=2 and venue_id is not null;
 select venue_id from events group by venue_id;
 select distinct venue_id from events;
+select venue_id, count(*) over (partition by venue_id) from events order by venue_id;
+select venue_id, count(*) from events group by venue_id order by venue_id;
