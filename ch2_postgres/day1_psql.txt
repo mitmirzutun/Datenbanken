@@ -1,0 +1,23 @@
+-- after book database is created, page 10
+-- make sure that you are in the correct db
+\c book
+select current_database();
+CREATE EXTENSION tablefunc;
+CREATE EXTENSION  dict_xsyn;
+CREATE EXTENSION fuzzystrmatch;
+CREATE EXTENSION fuzzystrmatchy;
+CREATE EXTENSION pg_trgm;
+CREATE EXTENSION cube;
+-- check extension
+select '1'::cube;
+\h CREATE INDEX
+\h SELECT
+CREATE TABLE countries( country_code char(2) PRIMARY KEY, country_name text UNIQUE);
+\l
+\dt
+INSERT INTO countries( country_code, country_name) values ('us','United States'),('mx','Mexico'),('au','Australia'),('gb','United Kingdom'),('de','Germany'),('ll','Loompaland');
+INSERT INTO countries VALUES ('uk','United Kingdom');
+SELECT * from countries;
+DELETE from countries where country_code = 'll';
+\q
+
