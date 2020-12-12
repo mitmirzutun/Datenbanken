@@ -32,3 +32,4 @@ select venue_id from events group by venue_id;
 select distinct venue_id from events;
 select venue_id, count(*) over (partition by venue_id) from events order by venue_id;
 select venue_id, count(*) from events group by venue_id order by venue_id;
+select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
