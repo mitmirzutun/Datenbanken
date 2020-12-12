@@ -1,0 +1,33 @@
+# idea: try match simple. is it really possible to insert one null and one unreferenced value?
+
+struggled with this since alter table alter constraint doesn't do the trick, it can only alter deferrable to not deferrable and back.
+
+solution: drop and add
+
+```
+-- to find name of constraint
+\d venues
+alter table venues drop constraint "venues_country_code_postal_code_fkey";
+alter table venues add foreign key (country_code, postal_code) references cities (country_code, postal_code) match simple;
+insert into venues(name,postal_code,country_code) values ('Voodoo Donutsxxx',NULL,'ca');
+/* oh dear. and MATCH SIMPLE is default.
+INSERT 0 1
+book=# select * from venues;
+ venue_id |       name       | street_address |  type   | postal_code | country_code 
+----------+------------------+----------------+---------+-------------+--------------
+        1 | Crystal Ballroom |                | public  | 97205       | us
+        2 | Voodoo Donuts    |                | public  | 97205       | us
+        5 | Voodoo Donutsxxx |                | public  |             | ca
+(3 rows)
+*/
+now restore the table to have a match full constraint. What will happen to the evil data?
+it must be deleted before the constraint can be added.
+book=# alter table venues add foreign key (country_code, postal_code) references cities (country_code, postal_code) match full deferrable;
+ERROR:  insert or update on table "venues" violates foreign key constraint "venues_country_code_postal_code_fkey"
+DETAIL:  MATCH FULL does not allow mixing of null and nonnull key values.
+book=# delete from venues where postal_code is NULL;
+DELETE 1
+book=# alter table venues add foreign key (country_code, postal_code) references cities (country_code, postal_code) match full;
+ALTER TABLE
+book=# 
+*/

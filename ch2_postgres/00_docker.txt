@@ -6,5 +6,10 @@ docker exec -it some-postgres /bin/bash
 su - postgres
 createdb book
 psql book
+# caution: once the container is removed, the content of the database is gone. Stop and start is ok.
 # continue with postgres commands in next file
 
+# if you want to bring some file from outside into the container:
+docker cp add_event.sql some-postgres:/tmp
+# similar for bringing a file from inside out
+docker cp some-postgres:/var/lib/postgresql/.psql_history .
