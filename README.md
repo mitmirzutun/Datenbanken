@@ -11,3 +11,6 @@ Do the exercises in docker containers. As a prerequisite, install docker on your
 ```
 docker pull postgres
 ``` 
+## createlang
+
+createlang is deprecated (https://www.postgresql.org/docs/9.1/app-createlang.html)
