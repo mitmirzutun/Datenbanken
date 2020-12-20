@@ -1,4 +1,4 @@
-create table countries(country_code char(2) primary key, county_name text unique);
+create table countries(country_code char(2) primary key, country_name text unique);
 insert into countries(country_code, country_name) values ('us', 'United States');
 insert into countries(country_code, country_name) values ('mx', 'Mexico');
 insert into countries(country_code, country_name) values ('au', 'Australia');
