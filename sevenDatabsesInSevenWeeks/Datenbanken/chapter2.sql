@@ -60,7 +60,7 @@ begin
     insert into venues (name,postal_code,country_code) values (venue, postal, country) returning venue_id Into the_venue_id;
     did_insert := true;
   end if;
-  RAise Notice 'Venue found%', the_venue_id;
+  RAise Notice 'Venue found %', the_venue_id;
   insert into events (Title, starts, ends, venue_id) values (title,starts,ends,the_venue_id);
   return did_insert;
 end;
@@ -69,6 +69,17 @@ $$ Language plpgsql;
 select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
 select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
 create table logs(event_id integer,old_title varchar(255), old_starts timestamp,old_ends timestamp, logged_at timestamp Default current_timestamp);
+
+
+create or replace function log_event() returns trigger as $$
+declare
+begin
+  insert into logs(event_id,old_title,old_starts,old_ends) values (old.event_id,old.title,old.starts,old.ends);
+  raise notice 'Someone just changed event #%', old.event_id;
+  return new;
+end;
+$$ Language plpgsql;
+
 create trigger log_events after update on events for each row execute procedure log_Event();
 update events set ends='2012-05-04 01:00:00' whcreateere title='House Party';
 create view holidays as select event_id as holiday_id, title as name, starts as date from events where title like '%Day%' and venue_id is null;
