@@ -2,13 +2,13 @@ create table countries(country_code char(2) primary key, country_name text uniqu
 insert into countries(country_code, country_name) values ('us', 'United States');
 insert into countries(country_code, country_name) values ('mx', 'Mexico');
 insert into countries(country_code, country_name) values ('au', 'Australia');
-insert into countries(country_code, country_name) values ('gb', 'United Kingdom);
+insert into countries(country_code, country_name) values ('gb', 'United Kingdom');
 insert into countries(country_code, country_name) values ('de', 'Germany');
 create table cities(name text not null, postal_code varchar(9) check (postal_code <> ''), country_code char(2) references countries, primary key (country_code, postal_code));
 insert into cities values ('Portland', '97205', 'us');
 insert into cities values ('Munich', '80689', 'de');
 insert into cities values ('Munich', '80686', 'de');
-create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) Refererces cities(country_code,postal_code) match full);
+create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) references cities(country_code,postal_code) match full);
 insert into venues(name,postal_code,country_code) values ('Crystal Ballroom','97205','us');
 insert into venues(name,postal_code,country_code) values ('Voodoo Donuts','97205','us');
 insert into venues(name,street_adress,postal_code,country_code) values ('My Place','Laimer Platz','80689','de');
@@ -17,7 +17,7 @@ insert into events (title, starts, ends, venue_id) values ('LARP Club', '2012-02
 insert into events (title, starts, ends) values ('April Fools Day', '2012-04-01 00:00:00', '2012-04-01 23:59:00');
 insert into events (title, starts, ends) values ('Christmas', '2012-12-25 00:00:00', '2012-12-25 23:59:00');
 insert into events (title, starts, ends, venue_id) values ('Moby', '2012-02-06 21:00:00', '2012-02-06 23:00:00', (select venue_id from venues where name='Crystal Ballroom'));
-insert into events (title, starts, ends, venue_id) values ('Wedding', '2012-02-26 21:00:00', '2012-02-26 23:00:00', (select v7enue_id from venues where name='Voododr4o Donuts'));
+insert into events (title, starts, ends, venue_id) values ('Wedding', '2012-02-26 21:00:00', '2012-02-26 23:00:00', (select venue_id from venues where name='Voododr4o Donuts'));
 insert into events (title, starts, ends, venue_id) values ('Dinner with Mom', '2012-02-26 18:00:00', '2012-02-26 20:30:00', (select venue_id from venues where name='My Place'));
 insert into events (title, starts, ends) values ('Valentine''s Day', '2012-02-14 00:00:00', '2012-02-14 23:59:00');
 select relname from pg_class where relnamespace='2200' and relkind='r';
@@ -32,4 +32,23 @@ select venue_id from events group by venue_id;
 select distinct venue_id from events;
 select venue_id, count(*) over (partition by venue_id) from events order by venue_id;
 select venue_id, count(*) from events group by venue_id order by venue_id;
+
+Create or replace function add_event(title text, starts timestamp, ends timestamp, venue text, postal varchar(9), country char(2))
+returns boolean as $$
+declare
+  did_insert boolean:= false;
+  found_count integer;
+  the_venue_id integer;
+begin
+  select venue_id into the_venue_id from venues v where v.postal_code=postal and v.country_code=country and v.name Ilike venue limit 1;
+  if the_venue_id is null then
+    insert into venues (name,postal_code,country_code) values (venue, postal, country) returning venue_id Into the_venue_id;
+    did_insert := true;
+  end if;
+  RAise Notice 'Venue found%', the_venue_id;
+  insert into events (Title, starts, ends, venue_id) values (title,starts,ends,the_venue_id);
+  return did_insert;
+end;
+$$ Language plpgsql;
+
 select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
