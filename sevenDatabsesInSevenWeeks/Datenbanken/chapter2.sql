@@ -1,3 +1,18 @@
+-- assuming a fresh database, connected as postgres to postgres
+-- you can drop database book to get a fresh start
+
+\set ON_ERROR_STOP true
+
+create database book;
+
+\c book
+
+create extension tablefunc;
+create extension dict_xsyn;
+create extension fuzzystmatch;
+create extension pg_trgm;
+create extension cube;
+
 create table countries(country_code char(2) primary key, country_name text unique);
 insert into countries(country_code, country_name) values ('us', 'United States');
 insert into countries(country_code, country_name) values ('mx', 'Mexico');
@@ -11,7 +26,7 @@ insert into cities values ('Munich', '80686', 'de');
 create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) references cities(country_code,postal_code) match full);
 insert into venues(name,postal_code,country_code) values ('Crystal Ballroom','97205','us');
 insert into venues(name,postal_code,country_code) values ('Voodoo Donuts','97205','us');
-insert into venues(name,street_adress,postal_code,country_code) values ('My Place','Laimer Platz','80689','de');
+insert into venues(name,street_address,postal_code,country_code) values ('My Place','Laimer Platz','80689','de');
 create table events(title text, starts timestamp, ends timestamp, venue_id integer references venues, event_id serial primary key);
 insert into events (title, starts, ends, venue_id) values ('LARP Club', '2012-02-15 17:30:00', '2012-02-15 19:30:00', 2);
 insert into events (title, starts, ends) values ('April Fools Day', '2012-04-01 00:00:00', '2012-04-01 23:59:00');
@@ -64,4 +79,3 @@ update holidays set colors = '{"red", "green"}' where name='Christmas Day';
 create or replace table month_count(month int);
 insert into month_count values (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 select * from crosstab('select extract(year from starts) as year, extract(month from starts) as month, count(*) from events group by year,month order by year,month','Select * from month_count') as (year int, jan int, feb int, mar int, apr int, may int, jun int, jul int, aug int, sep int, oct int, nov int, dec int) order by year;
->>>>>>> 1f03b8f7b336668b6c743a6aea627c46b0d2640e
