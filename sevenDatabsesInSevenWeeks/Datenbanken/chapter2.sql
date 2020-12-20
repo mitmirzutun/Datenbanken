@@ -17,7 +17,7 @@ insert into events (title, starts, ends, venue_id) values ('LARP Club', '2012-02
 insert into events (title, starts, ends) values ('April Fools Day', '2012-04-01 00:00:00', '2012-04-01 23:59:00');
 insert into events (title, starts, ends) values ('Christmas', '2012-12-25 00:00:00', '2012-12-25 23:59:00');
 insert into events (title, starts, ends, venue_id) values ('Moby', '2012-02-06 21:00:00', '2012-02-06 23:00:00', (select venue_id from venues where name='Crystal Ballroom'));
-insert into events (title, starts, ends, venue_id) values ('Wedding', '2012-02-26 21:00:00', '2012-02-26 23:00:00', (select venue_id from venues where name='Voododr4o Donuts'));
+insert into events (title, starts, ends, venue_id) values ('Wedding', '2012-02-26 21:00:00', '2012-02-26 23:00:00', (select venue_id from venues where name='Voodoo Donuts'));
 insert into events (title, starts, ends, venue_id) values ('Dinner with Mom', '2012-02-26 18:00:00', '2012-02-26 20:30:00', (select venue_id from venues where name='My Place'));
 insert into events (title, starts, ends) values ('Valentine''s Day', '2012-02-14 00:00:00', '2012-02-14 23:59:00');
 select relname from pg_class where relnamespace='2200' and relkind='r';
@@ -52,3 +52,16 @@ end;
 $$ Language plpgsql;
 
 select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
+select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
+create table logs(event_id integer,old_title varchar(255), old_starts timestamp,old_ends timestamp, logged_at timestamp Default current_timestamp);
+create trigger log_events after update on events for each row execute procedure log_Event();
+update events set ends='2012-05-04 01:00:00' whcreateere title='House Party';
+create view holidays as select event_id as holiday_id, title as name, starts as date from events where title like '%Day%' and venue_id is null;
+select name, to_char(date, 'Month DD, YYYY') as date from holidays where date<= '2012-04-01';
+Alter table events add colors text array;
+create or replace view holidays as select event_id as holiday_id, title as name, starts as date, colors from events where title like '%Day%' and venue_id is null;
+update holidays set colors = '{"red", "green"}' where name='Christmas Day';
+create or replace table month_count(month int);
+insert into month_count values (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
+select * from crosstab('select extract(year from starts) as year, extract(month from starts) as month, count(*) from events group by year,month order by year,month','Select * from month_count') as (year int, jan int, feb int, mar int, apr int, may int, jun int, jul int, aug int, sep int, oct int, nov int, dec int) order by year;
+>>>>>>> 1f03b8f7b336668b6c743a6aea627c46b0d2640e
