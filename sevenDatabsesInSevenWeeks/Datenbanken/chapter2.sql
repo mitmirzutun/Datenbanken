@@ -81,12 +81,12 @@ end;
 $$ Language plpgsql;
 
 create trigger log_events after update on events for each row execute procedure log_Event();
-update events set ends='2012-05-04 01:00:00' whcreateere title='House Party';
+update events set ends='2012-05-04 01:00:00' where title='House Party';
 create view holidays as select event_id as holiday_id, title as name, starts as date from events where title like '%Day%' and venue_id is null;
 select name, to_char(date, 'Month DD, YYYY') as date from holidays where date<= '2012-04-01';
 Alter table events add colors text array;
 create or replace view holidays as select event_id as holiday_id, title as name, starts as date, colors from events where title like '%Day%' and venue_id is null;
 update holidays set colors = '{"red", "green"}' where name='Christmas Day';
-create or replace table month_count(month int);
+create table month_count (month int);
 insert into month_count values (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 select * from crosstab('select extract(year from starts) as year, extract(month from starts) as month, count(*) from events group by year,month order by year,month','Select * from month_count') as (year int, jan int, feb int, mar int, apr int, may int, jun int, jul int, aug int, sep int, oct int, nov int, dec int) order by year;
