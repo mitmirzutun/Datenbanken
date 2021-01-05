@@ -1,0 +1,10 @@
+# postgres faq
+https://wiki.postgresql.org/wiki/FAQ
+# postgres documentation release as of 2020.12
+https://www.postgresql.org/docs/13/index.html
+# references match full documentation 
+https://www.postgresql.org/docs/9.0/sql-createtable.html
+
+sql:
+select country_name from countries co join venues v on co.country_code = v.country_code where venue_id in (select venue_id from events where title = 'LARP Club');
+alter table venues add column active bool default true;

@@ -1,4 +1,4 @@
-create table countries(country_code char(2) primary key, county_name text unique);
+create table countries(country_code char(2) primary key, country_name text unique);
 insert into countries(country_code, country_name) values ('us', 'United States');
 insert into countries(country_code, country_name) values ('mx', 'Mexico');
 insert into countries(country_code, country_name) values ('au', 'Australia');
@@ -33,6 +33,7 @@ select distinct venue_id from events;
 select venue_id, count(*) over (partition by venue_id) from events order by venue_id;
 select venue_id, count(*) from events group by venue_id order by venue_id;
 select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
+<<<<<<< HEAD
 create table logs(event_id integer,old_title varchar(255), old_starts timestamp,old_ends timestamp, logged_at timestamp Default current_timestamp);
 create trigger log_events after update on events for each row execute procedure log_Event();
 update events set ends='2012-05-04 01:00:00' whcreateere title='House Party';
@@ -44,3 +45,5 @@ update holidays set colors = '{"red", "green"}' where name='Christmas Day';
 create or replace table month_count(month int);
 insert into month_count values (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 select * from crosstab('select extract(year from starts) as year, extract(month from starts) as month, count(*) from events group by year,month order by year,month','Select * from month_count') as (year int, jan int, feb int, mar int, apr int, may int, jun int, jul int, aug int, sep int, oct int, nov int, dec int) order by year;
+=======
+>>>>>>> 475e57e1c7f1a63c616e9153b8b302bd0f7b12e0
