@@ -1,0 +1,7 @@
+## list of aggregate functions
+https://www.postgresql.org/docs/13/functions-aggregate.html
+## GUI program
+[DBeaver](https://dbeaver.io/) (i like this one a lot, used it with snowflake)
+1. Download
+2. Have docker run expose the postgres port: `docker 
+3. 

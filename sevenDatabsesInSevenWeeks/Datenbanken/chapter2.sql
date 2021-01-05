@@ -1,17 +1,32 @@
+-- assuming a fresh database, connected as postgres to postgres
+-- you can drop database book to get a fresh start
+
+\set ON_ERROR_STOP true
+
+create database book;
+
+\c book
+
+create extension tablefunc;
+create extension dict_xsyn;
+create extension fuzzystrmatch;
+create extension pg_trgm;
+create extension cube;
+
 create table countries(country_code char(2) primary key, country_name text unique);
 insert into countries(country_code, country_name) values ('us', 'United States');
 insert into countries(country_code, country_name) values ('mx', 'Mexico');
 insert into countries(country_code, country_name) values ('au', 'Australia');
-insert into countries(country_code, country_name) values ('gb', 'United Kingdom);
+insert into countries(country_code, country_name) values ('gb', 'United Kingdom');
 insert into countries(country_code, country_name) values ('de', 'Germany');
 create table cities(name text not null, postal_code varchar(9) check (postal_code <> ''), country_code char(2) references countries, primary key (country_code, postal_code));
 insert into cities values ('Portland', '97205', 'us');
 insert into cities values ('Munich', '80689', 'de');
 insert into cities values ('Munich', '80686', 'de');
-create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) Refererces cities(country_code,postal_code) match full);
+create table venues(venue_id serial primary key, name varchar(255), street_address text, type char(7) check(type in ('public','private')) default 'public', postal_code varchar(9), country_code char(2), foreign key (country_code, postal_code) references cities(country_code,postal_code) match full);
 insert into venues(name,postal_code,country_code) values ('Crystal Ballroom','97205','us');
 insert into venues(name,postal_code,country_code) values ('Voodoo Donuts','97205','us');
-insert into venues(name,street_adress,postal_code,country_code) values ('My Place','Laimer Platz','80689','de');
+insert into venues(name,street_address,postal_code,country_code) values ('My Place','Laimer Platz','80689','de');
 create table events(title text, starts timestamp, ends timestamp, venue_id integer references venues, event_id serial primary key);
 insert into events (title, starts, ends, venue_id) values ('LARP Club', '2012-02-15 17:30:00', '2012-02-15 19:30:00', 2);
 insert into events (title, starts, ends) values ('April Fools Day', '2012-04-01 00:00:00', '2012-04-01 23:59:00');
@@ -32,18 +47,46 @@ select venue_id from events group by venue_id;
 select distinct venue_id from events;
 select venue_id, count(*) over (partition by venue_id) from events order by venue_id;
 select venue_id, count(*) from events group by venue_id order by venue_id;
+
+Create or replace function add_event(title text, starts timestamp, ends timestamp, venue text, postal varchar(9), country char(2))
+returns boolean as $$
+declare
+  did_insert boolean:= false;
+  found_count integer;
+  the_venue_id integer;
+begin
+  select venue_id into the_venue_id from venues v where v.postal_code=postal and v.country_code=country and v.name Ilike venue limit 1;
+  if the_venue_id is null then
+    insert into venues (name,postal_code,country_code) values (venue, postal, country) returning venue_id Into the_venue_id;
+    did_insert := true;
+  end if;
+  RAise Notice 'Venue found %', the_venue_id;
+  insert into events (Title, starts, ends, venue_id) values (title,starts,ends,the_venue_id);
+  return did_insert;
+end;
+$$ Language plpgsql;
+
 select add_event('House Party', '2012-05-03 23:00', '2012-05-04 02:00', 'Run''s house', '97205','us');
-<<<<<<< HEAD
 create table logs(event_id integer,old_title varchar(255), old_starts timestamp,old_ends timestamp, logged_at timestamp Default current_timestamp);
+
+
+create or replace function log_event() returns trigger as $$
+declare
+begin
+  insert into logs(event_id,old_title,old_starts,old_ends) values (old.event_id,old.title,old.starts,old.ends);
+  raise notice 'Someone just changed event #%', old.event_id;
+  return new;
+end;
+$$ Language plpgsql;
+
 create trigger log_events after update on events for each row execute procedure log_Event();
-update events set ends='2012-05-04 01:00:00' whcreateere title='House Party';
+update events set ends='2012-05-04 01:00:00' where title='House Party';
 create view holidays as select event_id as holiday_id, title as name, starts as date from events where title like '%Day%' and venue_id is null;
 select name, to_char(date, 'Month DD, YYYY') as date from holidays where date<= '2012-04-01';
 Alter table events add colors text array;
 create or replace view holidays as select event_id as holiday_id, title as name, starts as date, colors from events where title like '%Day%' and venue_id is null;
 update holidays set colors = '{"red", "green"}' where name='Christmas Day';
-create or replace table month_count(month int);
+create table month_count (month int);
 insert into month_count values (1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12);
 select * from crosstab('select extract(year from starts) as year, extract(month from starts) as month, count(*) from events group by year,month order by year,month','Select * from month_count') as (year int, jan int, feb int, mar int, apr int, may int, jun int, jul int, aug int, sep int, oct int, nov int, dec int) order by year;
-=======
->>>>>>> 475e57e1c7f1a63c616e9153b8b302bd0f7b12e0
+
