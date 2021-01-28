@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-01-28T20:44:17.622Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="3I0MkxhsQZRITMem0PEK" version="14.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-28T20:50:43.912Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="6BVfAK1zhMyUt94OyefN" version="14.0.0" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="865" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1483" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -66,6 +66,45 @@
         </mxCell>
         <mxCell id="6DqZ498Wy22EHyodnlSP-31" value="AP Kikerraum" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
           <mxGeometry x="350" y="1010" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-32" value="AP 15/Zi 4.24" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="350" y="530" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-33" value="AP 13/Zi 3.24" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="350" y="650" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-34" value="AP 14/Zi 5.24" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="350" y="410" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-35" value="AP 33/Zi 2.15" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="770" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-36" value="AP 29/Zi 2.06" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="30" y="770" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-37" value="AP 3/Zi 3.15" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="650" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-38" value="AP 32/Zi 3.06" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="30" y="650" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-39" value="AP 9/Zi 4.06" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="30" y="530" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-40" value="AP 27/Zi 4.15" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="530" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-41" value="AP 31/Zi 5.15" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="190" y="410" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-42" value="AP 26/Zi 5.06" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-43" value="AP 30/Zi 1.15" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="890" width="87.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6DqZ498Wy22EHyodnlSP-44" value="AP 28/Computerraum" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/switch/Switch_24_port_L3.svg;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1010" width="87.53" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
