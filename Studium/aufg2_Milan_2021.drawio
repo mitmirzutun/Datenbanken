@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-11T15:50:28.732Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="fwuJDktfhEJ6wCXZ89eL" version="15.4.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-10-11T16:04:37.077Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="sCssp7MOpCo2ipMdmizU" version="15.4.3" type="github" pages="2">
   <diagram id="IvafYgpCYRXgX-JP5Jq7" name="Page-1">
     <mxGraphModel dx="766" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
@@ -14,13 +14,13 @@
           <mxGeometry x="40" y="520" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-36" value="Das Auto hat eine Farbe" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="42.5" y="680" width="560" height="40" as="geometry" />
+          <mxGeometry x="40" y="680" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-37" value="Das Auto hat einen Preis" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="42.5" y="840" width="560" height="40" as="geometry" />
+          <mxGeometry x="40" y="840" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-38" value="Das Auto hat Innenausstattung" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="42.5" y="1000" width="560" height="40" as="geometry" />
+          <mxGeometry x="40" y="1000" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-39" value="Der Gebrauchtwagen hat einen Zustand" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="1320" width="560" height="40" as="geometry" />
@@ -62,7 +62,7 @@
           <mxGeometry x="40" y="1160" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-67" value="Ein Kunde hat eine KundenID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="45" y="1650" width="560" height="40" as="geometry" />
+          <mxGeometry x="40" y="1640" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-68" value="Ein Lieferant hat eine LieferantenID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="2360" width="560" height="40" as="geometry" />
@@ -471,7 +471,7 @@
         </mxCell>
         <object placeholders="1" Name="LieferantenID" label="Ge" id="2m-jZjdGSEvSYmMwfRLT-168">
           <mxCell style="shape=stencil(nVTBcoMgEP0aju2gjB+Qsekxl3amZ4LbyATBAWri3xdEGjXYms542ffc93bZBURKU9MWUI4lbQCRF5TnO2MU49RyJd97z+WOrgOXYRziyyKmpgVmA9hRzelRjJnGanWGC6/sqMFlDZpbz5I9wjv3j/9IyZSUTsT5mhkz4Z0Y5dLl4msQw89FsOnHOEStc2jAgh7LDOitx8MAvG63mZtE079sPh60yf5ns3+0m8WhZdts3hI2pHTI2uBIeaTsfNLqS1bJ4lrql+KOiHSjOrhVXeDEpFNNx3TB5ST9Z1X7mdx2gYV/1Nsu8LA/E8rA2mAdvnJ8pPzkQoR7l5zXylRcntLwy7gsXG240aEFlBcHvx35uE7pg4ohFfwkA8RA+jUb4G6CN7yq4rsxwE/heZptqaAMaiUq0GZKJPq8a2dAR0kPfAM=);whiteSpace=wrap;html=1;noLabel=1;_ElementType=AssociationType;glass=0;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;fontSize=8;fontColor=none;align=left;" vertex="1" parent="1">
-            <mxGeometry x="290" y="2440" width="160" height="40" as="geometry" />
+            <mxGeometry x="280" y="2440" width="160" height="40" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="2m-jZjdGSEvSYmMwfRLT-169" value="Metadaten: Anzahl&amp;gt;0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;fontColor=none;" vertex="1" parent="1">
