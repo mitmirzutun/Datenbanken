@@ -1,1 +1,138 @@
-<mxfile host="app.diagrams.net" modified="2021-10-11T12:56:11.993Z" agent="5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" version="14.5.7" etag="46yfI7JqrMvyfgSCpfGf" type="github"><diagram id="IvafYgpCYRXgX-JP5Jq7">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-10-11T13:18:21.926Z" agent="5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" etag="kGjZDv76YPFtgFrM8EYO" version="14.5.7" type="github" pages="2">
+  <diagram id="IvafYgpCYRXgX-JP5Jq7" name="Page-1">
+    <mxGraphModel dx="1447" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="739W72fwJbBnZSllMuie-1" value="&lt;br&gt;&lt;br&gt;&lt;b style=&quot;font-weight: normal&quot; id=&quot;docs-internal-guid-7beec195-7fff-d71c-2e84-b251b49cfc82&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38 ; margin-top: 0pt ; margin-bottom: 12pt&quot;&gt;&lt;span style=&quot;font-size: 16pt ; font-family: &amp;#34;arial&amp;#34; ; color: rgb(0 , 0 , 0) ; background-color: transparent ; font-weight: 400 ; font-style: normal ; font-variant: normal ; text-decoration: none ; vertical-align: baseline&quot;&gt;Autohaus&lt;/span&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38 ; margin-top: 0pt ; margin-bottom: 12pt&quot;&gt;&lt;span style=&quot;font-size: 12pt ; font-family: &amp;#34;arial&amp;#34; ; color: rgb(0 , 0 , 0) ; background-color: transparent ; font-weight: 400 ; font-style: normal ; font-variant: normal ; text-decoration: none ; vertical-align: baseline&quot;&gt;Ein Autohaus benötigt eine Datenbank der zu verkaufenden Autos. Diese Datenbank enthält Informationen zu den Fahrzeugen, Lieferanten und Kunden. Die wichtigsten Informationen für Autos sind der Hersteller, das Modell, das Baujahr und die Farbe. Zusätzlich können Informationen zur Innenausstattung gespeichert werden. Bei Gebrauchtwagen sind neben den genannten Informationen noch der Zustand, der Kilometerstand und die Anzahl der Vorbesitzer von Wichtigkeit. Alle Fahrzeuge haben einen aktuellen Preis. Ebenfalls werden in der Datenbank Informationen über die Kunden erfasst. Beim Kauf/Verkauf werden Kontaktdaten des Käufers/Verkäufers ermittelt. Dazu gehören E-Mail bzw. Telefonnummer, Name, Adresse und Volljährigkeit des Käufers bzw. Verkäufers. Zum Lieferanten gehören Informationen wie Name, Kontaktdaten, eine Liste der verfügbaren Fahrzeuge und welche bei Bedarf nachgekauft werden können.&lt;/span&gt;&lt;/p&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1270" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-2" value="Auto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-3" value="Autohersteller" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-4" value="Hersteller" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-5" value="Auto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-6" value="Modell" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-7" value="Auto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-8" value="Baujahr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-9" value="Auto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-10" value="Farbe" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-11" value="Auto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-12" value="Innenaustattung" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-13" value="Gebrauchtwagen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-14" value="Zustand" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-15" value="Wagenzustand" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-16" value="Kilometerstand" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-17" value="Anzahl Vorbesitzer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-18" value="Gebrauchtwagen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-19" value="Gebrauchtwawgen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-20" value="Auto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-21" value="Preis" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-22" value="Käufer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-23" value="Kontaktdaten" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-24" value="Käufer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-25" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-26" value="Volljährigkeit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-27" value="Kontaktdaten" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-28" value="Liste der verfügbaren Fahrzeuge" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-29" value="Liste der nachbestellbaren Fahrtezge" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-31" value="Lieferant" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-32" value="Lieferant" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-33" value="Lieferant" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-36" value="Automodell" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="420" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-37" value="AutoBaujahr" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="540" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-38" value="Autofarbe" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="660" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-39" value="AutoInnenausstattung" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="780" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-41" value="WagenKilometerstand" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="420" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-42" value="WagenBesitzer" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="540" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-43" value="Autopreis" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="660" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="739W72fwJbBnZSllMuie-44" value="Käuferkontaktdaten" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="725" y="780" width="150" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="DKlnuYgH37OPeWtUBzao" name="Page-2">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="Bj4k8IjxLYs70TTLHFmb-0" />
+        <mxCell id="Bj4k8IjxLYs70TTLHFmb-1" parent="Bj4k8IjxLYs70TTLHFmb-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
