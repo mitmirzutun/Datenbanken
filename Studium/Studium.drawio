@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T08:02:19.855Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="aO1EGi8SBOCd58-Ymfe1" version="15.4.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-10-20T08:03:32.812Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="PFuJrilzrZRMDJTqL8FE" version="15.4.3" type="github" pages="3">
   <diagram id="RJwkC6JrTSD5yiBWlyb1" name="Page-1">
     <mxGraphModel dx="782" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -776,7 +776,7 @@
             <mxPoint x="720" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tki79UGSQChK2Bzn5zrb-10" value="Telefonnummer" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
+        <mxCell id="tki79UGSQChK2Bzn5zrb-10" value="Telefonnummer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
           <mxGeometry x="840" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tki79UGSQChK2Bzn5zrb-30" value="1:*&lt;br&gt;Adresse" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-27" target="tki79UGSQChK2Bzn5zrb-7">
@@ -788,7 +788,7 @@
         <mxCell id="tki79UGSQChK2Bzn5zrb-31" value="TeilID" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
           <mxGeometry x="340" y="160" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tki79UGSQChK2Bzn5zrb-32" value="Lagerort" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
+        <mxCell id="tki79UGSQChK2Bzn5zrb-32" value="Teillager" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
           <mxGeometry x="500" y="160" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tki79UGSQChK2Bzn5zrb-33" value="1:1&lt;br&gt;Teil" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-2" target="tki79UGSQChK2Bzn5zrb-31">
@@ -889,6 +889,12 @@
             <mxPoint x="600" y="420" as="sourcePoint" />
             <mxPoint x="660" y="420" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="tki79UGSQChK2Bzn5zrb-57" value="Straßenangabe" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
+          <mxGeometry x="1000" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tki79UGSQChK2Bzn5zrb-58" value="Ortsangabe" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
+          <mxGeometry x="1160" y="50" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
