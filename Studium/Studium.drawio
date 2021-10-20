@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-20T08:06:45.785Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="e0ngMRjMahJmMKQcLLEO" version="15.4.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-10-20T08:40:06.636Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="BF9TXr0zqB8iQ0Fz1gXR" version="15.4.3" type="github" pages="3">
   <diagram id="RJwkC6JrTSD5yiBWlyb1" name="Page-1">
     <mxGraphModel dx="782" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -872,19 +872,19 @@
         <mxCell id="tki79UGSQChK2Bzn5zrb-53" value="Regalteil" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tki79UGSQChK2Bzn5zrb-1">
           <mxGeometry x="280" y="370" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tki79UGSQChK2Bzn5zrb-54" value="1:1&lt;br&gt;Fach" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-49" target="tki79UGSQChK2Bzn5zrb-52">
+        <mxCell id="tki79UGSQChK2Bzn5zrb-54" value="1:*&lt;br&gt;Fach" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-49" target="tki79UGSQChK2Bzn5zrb-52">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="550" y="210" as="sourcePoint" />
             <mxPoint x="550" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tki79UGSQChK2Bzn5zrb-55" value="1:1&lt;br&gt;Regalgruppe" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-49" target="tki79UGSQChK2Bzn5zrb-51">
+        <mxCell id="tki79UGSQChK2Bzn5zrb-55" value="1:*&lt;br&gt;Regalgruppe" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-49" target="tki79UGSQChK2Bzn5zrb-51">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="590" y="410" as="sourcePoint" />
             <mxPoint x="650" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tki79UGSQChK2Bzn5zrb-56" value="1:1&lt;br&gt;Regalteil" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-53" target="tki79UGSQChK2Bzn5zrb-49">
+        <mxCell id="tki79UGSQChK2Bzn5zrb-56" value="1:*&lt;br&gt;Regalteil" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="tki79UGSQChK2Bzn5zrb-1" source="tki79UGSQChK2Bzn5zrb-53" target="tki79UGSQChK2Bzn5zrb-49">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="600" y="420" as="sourcePoint" />
             <mxPoint x="660" y="420" as="targetPoint" />
